@@ -1,17 +1,19 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
+import { Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Navigation from './components/Navigation';
 import './App.css';
 
 function App() {
   return (
-    <Container fluid>
-      <Navbar className="border-bottom" bg="transparent" expand="lg">
-        <Navbar.Brand>Rachel Grier</Navbar.Brand>
-
-      
-      </Navbar>
-    </Container>
+    <Router>
+      <Container fluid>
+        <Navigation />
+        <Home />
+      </Container>
+    </Router>
+    
   );
 }
 
